@@ -1,0 +1,34 @@
+node_modules/
+.next/
+.env*
+!.env.example
+*.tsbuildinfo
+coverage/
+test-results/
+.local/
+
+# Private tooling, deployment state, credentials, and local database files
+.vercel/
+.aws/
+.agents/
+.codex/
+.npmrc
+.pgpass
+pgpass.conf
+*.pem
+*.key
+*.p12
+*.pfx
+*.dump
+*.backup
+pgdata/
+postgres-data/
+
+# Generated output, logs, and machine-specific editor files
+out/
+dist/
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

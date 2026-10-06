@@ -1,0 +1,3 @@
+CREATE INDEX "ingestion_started_idx" ON "ingestion_runs" USING btree ("started_at");--> statement-breakpoint
+ALTER TABLE "ingestion_runs" ADD CONSTRAINT "valid_ingestion_status" CHECK ("ingestion_runs"."status" in ('running', 'success', 'failed'));--> statement-breakpoint
+ALTER TABLE "ingestion_runs" ADD CONSTRAINT "valid_ingestion_counts" CHECK ("ingestion_runs"."records_fetched" >= 0 and "ingestion_runs"."records_inserted" >= 0);
